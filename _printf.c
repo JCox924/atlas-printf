@@ -30,17 +30,24 @@ int _printf(const char *format, ...)
 				break;
 			if (*format == 'c')
 			{
-				c = va_args(args, int);
+				c = va_arg(args, int);
 				write(1, &c, 1);
 				print++;
 			}
+			if (*format == 's')
+			{
+				s = va_arg(args, char *);
+				write(1, &s, 1);
+				print++;
+			}
+			if (*format == '%')
+			{
+				 = va_arg(args, );
+				 write(1, , 1);
+				 print++;
+			}
 
-		}
 
-
-	va_arg();
-
-
-	va_end();
+	va_end(args);
 
 
