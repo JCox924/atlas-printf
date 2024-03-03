@@ -3,17 +3,53 @@
 int _printf(const char *format, ...)
 {
 	int print;
-	int c;
+	const char *c;
 	char *s;
 
 	va_list args;
+	va_start(args, format);
+
 
 	if (format == NULL)
 	{
 		return (-1);
 	}
+	for (*c = format; *c; c++)
+	{
+		if (*c == '%')
+		{
+			c++;
+			print += _putchar(va_args(args, int));
+		}
+		else if (*c == 's')
+		{
+			s = va_arg(args, char*);
 
-	va_start(args, format);
+			for (; *s;s++)
+			{
+				print += _putchar(*s);
+			}
+		}
+		else
+		{
+			print += _putchar('%');
+
+			if (*p)
+			{
+				print += _putchar(*c);
+			}
+			else
+			{
+				p--;
+			}
+		}
+		else
+		{
+			print += _putchar(*c);
+		}
+
+	}
+
 
 	va_end(args);
 	return (print);
