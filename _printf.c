@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "main.h"
-FILE *fp;
 
 int _printf(const char *format, ...)
 {
@@ -21,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if(*format != '%')/** if character is not '%' print */
 		{
-		fwrite(format, sizeof(char), 1, fp);
+		write(1, format, 1);
 		print++; /** print the character to stdout */
 		}
 		else /** if the next character is '%' */
@@ -32,17 +30,17 @@ int _printf(const char *format, ...)
 			if (*format == 'c')/** if next char is c */
 			{
 				c = va_arg(args, int);
-				fwrite(&c, sizeof(char), 1, fp);
+				write(1, &c, 1);
 				print++;
 			}
 			else if (*format == 's')/**if the next char is 's'*/
 			{
 				s = va_arg(args, char*);
-				fwrite(s, sizeof(char), strlen(s), fp);
+				write(1, s, strlen(s));
 			}
 			else if (*format == '%')/** if next char is '%' print it */
 			{
-				 fwrite(format, sizeof(char), 1, fp);
+				 write(1, format, 1);
 				 print++;
 			}
 		}
