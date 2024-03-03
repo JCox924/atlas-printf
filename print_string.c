@@ -15,7 +15,7 @@ int print_string(va_list args)
 	if (s == NULL)
 	{
 		s = "(null)";
-		len = strlen(s);
+		len = _strlen(s);
 		for (i = 0; i < len, i++)
 		{
 			putchar(s[i]);
@@ -27,7 +27,7 @@ int print_string(va_list args)
 		len = strlen(s);
 		for (i = 0; i < len; i++)
 		{
-			putchar(s[i]);
+			_putchar(s[i]);
 		}
 		return (len);
 	}
