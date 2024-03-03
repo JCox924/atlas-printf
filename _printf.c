@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	while (*format) /** Our loop through the string */
+	while (*format != '\0') /** Our loop through the string */
 	{
 		if(*format != '%')/** if character is not i'%' print */
 		{
@@ -24,9 +24,7 @@ int _printf(const char *format, ...)
 		}
 		else /** if the next character is '%' */
 		{
-			format++;/** skip the '%' and move to the next */
-			if (*format == '\0')
-				break;/** stop */ 
+			format++;/** skip the '%' and move to the next */ 
 			if (*format == 'c')/** if next char is c */
 			{
 				c = va_arg(args, int);
