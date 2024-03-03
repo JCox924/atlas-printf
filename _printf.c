@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 's')/**if the next char is 's'*/
 			{
-				*s = va_arg(args, char*);
+				s = va_arg(args, char*);
 				write(1, s, strlen(s));
 			}
 			else if (*format == '%')/** if next char is '%' print it */
