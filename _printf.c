@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 
 	while (*format) /** Our loop through the string */
 	{
-		if(*format != '%')/** if character is not '%' print */
+		if(*format != '%')/** if character is not i'%' print */
 		{
 		write(1, format, 1);
 		print++; /** print the character to stdout */
@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 			{
 				s = va_arg(args, char*);
 				write(1, s, strlen(s));
+				print++;
 			}
 			else if (*format == '%')/** if next char is '%' print it */
 			{
