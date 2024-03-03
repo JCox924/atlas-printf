@@ -51,10 +51,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (print);
 }
-
-int main()
-{
-	_printf("Isaac\n");
-	_printf("%c\n", 'a');
-	return (0);
-}
