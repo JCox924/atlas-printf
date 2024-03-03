@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_% - Prints %
+ * print_% - Prints % (ASCII 37)
  * Return: 0
  */
 
 int print_%(void)
 {
-	_putchar(37);/**Been going about wrong ASCII*/
+	_putchar(37);/**Been going about it wrong ASCII*/
 	return (1);
 }
 
