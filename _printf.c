@@ -1,4 +1,4 @@
-#include "main.h"
+ #include "main.h"
 
 int _printf(const char *format, ...)
 {
@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		if (*c == '%')
 		{
 			c++;
-			print += _putchar(va_args(args, int));
+			print += _putchar(va_arg(args, int));
 		}
 		else if (*c == 's')
 		{
@@ -30,17 +30,17 @@ int _printf(const char *format, ...)
 				print += _putchar(*s);
 			}
 		}
-		else
+		else if
 		{
 			print += _putchar('%');
 
-			if (*p)
+			if (*c)
 			{
 				print += _putchar(*c);
 			}
 			else
 			{
-				p--;
+				c--;
 			}
 		}
 		else
