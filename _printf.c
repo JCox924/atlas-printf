@@ -2,9 +2,9 @@
 
 int _printf(const char *format, ...)
 {
-	printer p[] = 
-	{{"%s", printf_string}, {"%c", printf_char}, {"%%", print_percent}
-	};
+	printer p[] =
+        {{"%s", printf_string}, {"%c", printf_char}, {"%%", print_percent}
+        };
 
 	va_list args;
 	int i;
@@ -15,20 +15,20 @@ int _printf(const char *format, ...)
 	
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
-
-		va_end(args);
 		return (-1);
 
 	}
+Here:
 	while (format[i] != '\0')
 	{
-		t = 3;
+		t = 2;
 		while (t >= 0)
 		{
-			if(p[t].id[1] == format[i + 1])
+			if(p[t].id[0] == format[i] && p[t].id[1] == format[i + 1])
 			{
-				len += p[t].f(args);
-				i += 2;
+				len = len + p[t].f(args);
+				i = i + 2;
+				goto Here;
 				;
 			}
 			t--;
