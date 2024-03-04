@@ -8,11 +8,10 @@
 int _strlen(char *s)
 {
 	int i;
-	int count = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
-		count++;
-	return (count);
+	for (i = 0; s[i] != 0; i++)
+		;
+	return (i);
 }
 /**
  * _strlencon - Same as up there but for const
@@ -23,9 +22,8 @@ int _strlen(char *s)
 int _strlencon(const char *s)
 {
 	int i;
-	int count = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
-		count++;
-	return (count);
+	for (i = 0; s[i] != 0; i++)
+		;
+	return (i);
 }
