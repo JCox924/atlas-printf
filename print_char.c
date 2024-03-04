@@ -3,7 +3,7 @@
 /**
  * print_char - Prints single character
  * @s: Function Pointer
- * Return: 0
+ * Return: 1
  */
 int printf_char(va_list args)
 {
@@ -11,6 +11,6 @@ int printf_char(va_list args)
 
 	s = va_arg(args, int);
 	_putchar(s);
-	return(0);
+	return(1);
 }
 	
