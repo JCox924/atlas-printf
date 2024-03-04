@@ -5,7 +5,7 @@
  * @s: Function Pointer
  * Return: 0
  */
-int print_char(va_list args)
+int printf_char(va_list args)
 {
 	char s;
 

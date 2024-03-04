@@ -5,7 +5,7 @@
  * Return: the length of the string
  */
 
-int print_string(va_list args)
+int printf_string(va_list args)
 {
 	int len;
 	int i;
