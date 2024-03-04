@@ -7,9 +7,9 @@ int _printf(const char *format, ...)
         };
 
 	va_list args;
-	int i;
-	int t = 0;
-	int len;
+	int i = 0;
+	int t;
+	int len = 0;
 	int struc_size = sizeof(p) / sizeof(p[0]);
 
 	va_start(args, format);
@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		for (; t < struc_size; t++)
+		for (t = 0; t < struc_size; t++)
 		{
 			if(p[t].id[0] == format[i] && p[t].id[1] == format[i + 1])
 			{
