@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	for (*c = format; *c; c++)
+	for (c = format; *c; c++)
 	{
 		if (*c == '%')
 		{
