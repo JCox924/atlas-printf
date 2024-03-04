@@ -4,7 +4,7 @@
  * Return: 0
  */
 
-int print_percent(void)//changed from print_% -> print_percent
+int print_percent(void)
 {
 	_putchar(37);/**Been going about it wrong ASCII*/
 	return (1);
