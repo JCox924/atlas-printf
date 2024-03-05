@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int t;
 	int len = 0;
-	int struc_size = sizeof(p) / sizeof(p[0]);
 
 	va_start(args, format);
 	
