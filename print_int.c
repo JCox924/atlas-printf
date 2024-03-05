@@ -4,43 +4,28 @@
  * @args: Argument
  * Return: 0
  */
+int printf_int(va_list args) {
+    int n = va_arg(args, int);
+    int i = 0;
+    int last;
 
-int printf_int(va_list args)
-{
-	int n = va_arg(args, int);
-	int i = 1;
-	int num;
-	int last = n % 10;
-	int digit;
-	int exp = 1;
+    if (n < 0) {
+        _putchar('-');
+        n = -n;
+        i++;
+    }
 
-	n = n / 10;
-	num = n;
+    if (n == 0) {
+        _putchar('0');
+        return 1;
+    }
 
-	if (last < 0)
-	{
-		_putchar('-');
-		num = -num;
-		n = -n;
-		last = -last;
-		i++;
-	}
-	if (num > 0)
-	{
-		while (num / 10 != 0)
-		{
-			exp = exp * 10;
-			num = num / 10;
-		}
-		num = n;
-		while (exp > 0)
-		{
-			digit = num / exp;
-			_putchar(digit *exp);
-			exp = exp / 10;
-			i++;
-		}
-	}
-	_putchar(last + '0');
-	return (i);
+    while (n > 0) {
+        last = n % 10;
+        _putchar(last + '0');
+        n = n / 10;
+        i++;
+    }
+
+    return i;
 }
