@@ -22,7 +22,7 @@ Here:
 
 	while (format[i] != '\0')
 	{
-		j = 2;
+		t = 2;
 		while (t >= 0)
 		{
 			{
