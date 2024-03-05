@@ -10,7 +10,7 @@
 
 int print_dec(va_list args)
 {
-	int n = va_args(args, int);
+	int n = va_arg(args, int);
 	int num, ter = n % 10, digit;
 	int i = 1;
 	int exp = 1;
@@ -18,7 +18,7 @@ int print_dec(va_list args)
 	n = n / 10;
 	num = n;
 
-	if (last < 0)
+	if (ter < 0)
 	{
 		_putchar('-');
 		num = -num;

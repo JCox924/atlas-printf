@@ -8,8 +8,8 @@
 int _printf(const char *format, ...)
 {
 	printer p[] = {
-		{"%s", printf_string},
-		{"%c", printf_char},
+		{"%s", printf_string}, {"%d", print_dec},
+		{"%c", printf_char}, {"%i", printf_int},
 		{"%%", print_percent}
 	};
 	va_list args;

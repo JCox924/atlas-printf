@@ -20,6 +20,8 @@ int _putchar(char c);
 int _strlen(char *s);
 int _strlencon(const char *s);
 int print_percent(void);
+int printf_int(va_list args);
+int print_dec(va_list args);
 
 
 #endif
