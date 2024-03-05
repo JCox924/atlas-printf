@@ -23,6 +23,7 @@ int printf_int(va_list args)
 		num = -num;
 		n = -n;
 		ter = -ter;
+		i++;
 	}
 	if (num > 0)
 	{
