@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_% - Prints % (ASCII 37)
+ * print_percent - Prints % (ASCII 37)
  * Return: 0
  */
 

@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_char - Prints single character
- * @s: Function Pointer
+ * printf_char - Prints single character
+ * @args: Function Pointer
  * Return: 1
  */
 int printf_char(va_list args)
