@@ -18,24 +18,29 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
+Here:
 
 	while (format[i] != '\0')
 	{
-		for (t = 0; t < struc_size; t++)
+		j = 2;
+		while (t >= 0)
 		{
-			if(p[t].id[0] == format[i] && p[t].id[1] == format[i + 1])
 			{
-				len += p[t].f(args);
-				i += 2;
-				break;
-			}
+				if(p[t].id[0] == format[i] && p[t].id[1] == format[i + 1])
+				{
+					len += p[t].f(args);
+					i += 2;
+					goto Here;
+				}
 
+			}
+			t--;
 		}
 		if (format[i] != '\0')
 		{
 		_putchar(format[i]);
-		i++;
 		len++;
+		i++;
 		}
 	}
 
