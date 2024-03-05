@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		t = 2;
+		t = 4;
 		while (t >= 0)
 		{
 			{
